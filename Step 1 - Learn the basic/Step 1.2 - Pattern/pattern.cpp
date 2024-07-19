@@ -228,11 +228,11 @@ using namespace std;
 		}
 	}
 
-	//* E
-	//* D E 
-	//* C D E 
-	//* B C D E 
-	//* A B C D E
+	//! E
+	//! D E 
+	//! C D E 
+	//! B C D E 
+	//! A B C D E
 	void print12(int n){
 		for(int i=0;i<n;i++){
 			char ch = 'A';
@@ -363,8 +363,8 @@ using namespace std;
 			for(int j=0;j<2*n-1;j++){
 				int top = i;
 				int left = j;
-				int right = 2*n-2-i;
-				int bottom = 2*n-2-j;
+				int right = 2*n-2-j;
+				int bottom = 2*n-2-i;
 				cout<<n-min(min(top,bottom),min(left,right));
 			}
 			cout<<endl;
@@ -375,7 +375,7 @@ using namespace std;
 int main(){
 	int n;
 	cin>>n;
-	print10(n);
+	print2(n);
 	
 	
 }
