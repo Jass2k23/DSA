@@ -5,7 +5,7 @@ using namespace std;
 void explainVector(){
     vector<int> v(5,100);   //<100,100,100,100,100>
     v.push_back(200);       //<100,100,100,100,100,200>
-    vector<int> v2(v);     // copies the data of v1 to v2
+    vector<int> v2(v);     // copies the data of v to v2
 
     //! Iterators
     vector<int>::iterator it = v.begin();   // points to memory address the first element of the vector, to access the value we use // *it
@@ -124,7 +124,7 @@ void explainVector(){
     //! Multiset
     void explainMultiSet(){
         //? sorted order
-        // the only difference is when you erase an element it deletes all the elements with the same value, so to delete only one element use it.erase(it.find(2) which uses iterator.
+        // the only difference is when you erase an element it deletes all the elements with the same value, so to delete only one element use it.erase(it.find(2)) which uses iterator.
         multiset<int> ms;
         ms.insert(1);
         ms.insert(1);
@@ -171,7 +171,7 @@ void explainVector(){
     //! Multimap
     // same as map , but can have multiple keys with same value
 
-    void comp(pair<int,int> p1, pair<int,int> p2){
+    bool comp(pair<int,int> p1, pair<int,int> p2){
         if(p1.second < p2.second) return true;
         if(p1.second > p2.second) return false;
         if(p1.second == p2.second) return true;
